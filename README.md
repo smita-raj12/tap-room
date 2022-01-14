@@ -45,7 +45,7 @@ Run `npm install` in the git BASH terminal to install dependencies.
 
 ## Known bugs
 
-None 
+There are no bugs. But application throwing 1 warning
 
 ## License information with a copyright and date:
 

@@ -22,14 +22,17 @@ function KegDetail(props){
         <p>{getPints(keg.pints)}</p>
         <hr/>
         <button disabled={keg.pints <= 0 ? true : false} onClick={ props.onClickingSell }>Sell</button> <br/>
-        <button onClick={ props.onClickingEdit }>Update Ticket</button>
+        <button onClick={ props.onClickingEdit }>Update Keg</button><br/>
+        <button onClick={()=> onClickingDelete(ticket.id) }>Delete</button>
     </React.Fragment>
   );
 }
 
 KegDetail.propTypes = {
   keg: PropTypes.object,
-  onClickingSell:PropTypes.func
+  onClickingSell:PropTypes.func,
+  onClickingEdit:PropTypes.func,
+  onClickingDelete:PropTypes.func
 };
 
 export default KegDetail;

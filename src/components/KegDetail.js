@@ -21,7 +21,8 @@ function KegDetail(props){
         <p>{keg.flavor}</p>
         <p>{getPints(keg.pints)}</p>
         <hr/>
-        <button disabled={keg.pints <= 0 ? true : false} onClick={ props.onClickingSell }>Sell</button>
+        <button disabled={keg.pints <= 0 ? true : false} onClick={ props.onClickingSell }>Sell</button> <br/>
+        <button onClick={ props.onClickingEdit }>Update Ticket</button>
     </React.Fragment>
   );
 }

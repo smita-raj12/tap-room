@@ -36,11 +36,13 @@ This application have the following functionality:
 
 2. Download any Code Editor for your choice. (Here I used VSCode).
 
-3. Open git BASH terminal and navigate to the tap-room, within the directory
+3. Make sure Node has installed if not search it on google and follow the steps of node installation. 
+
+4. Open git BASH terminal and navigate to the tap-room, within the directory
 Run `npm install` in the git BASH terminal to install dependencies. 
 
 
-4. View the website by visiting localhost:3000/ in a new web browser tab (such as google chrome)
+5. View the website by visiting localhost:3000/ in a new web browser tab (such as google chrome)
 
 
 ## Known bugs

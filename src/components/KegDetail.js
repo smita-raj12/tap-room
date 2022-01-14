@@ -11,7 +11,7 @@ function getPints(pints) {
 }
 
 function KegDetail(props){
-  const { keg } = props; 
+  const { keg, onClickingDelete } = props; 
   return (
     <React.Fragment>
         <h2>Keg Detail</h2>
@@ -23,7 +23,7 @@ function KegDetail(props){
         <hr/>
         <button disabled={keg.pints <= 0 ? true : false} onClick={ props.onClickingSell }>Sell</button> <br/>
         <button onClick={ props.onClickingEdit }>Update Keg</button><br/>
-        <button onClick={()=> onClickingDelete(ticket.id) }>Delete</button>
+        <button onClick={()=> onClickingDelete(keg.id) }>Delete</button><br/>
     </React.Fragment>
   );
 }

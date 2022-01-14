@@ -1,6 +1,7 @@
 import React from 'react';
 import NewKegForm from './NewKegForm';
 import KegList from './KegList';
+import KegDetail from './KegDetail';
 
 class KegControl extends React.Component {
 
@@ -9,12 +10,14 @@ class KegControl extends React.Component {
         this.state = {
             formVisibleOnPage: false,
             mainKegList: [],
-            selectedKeg: null
+            selectedKeg: null,
+            kegPint:0,
+            kegPrice:0
         };
         this.handleClick = this.handleClick.bind(this);
     }
      
-     handleChangingSelectedKeg = (id) => {
+    handleChangingSelectedKeg = (id) => {
       const selectedKeg = this.state.mainKegList.filter(Keg => Keg.id === id)[0];
       this.setState({selectedKeg: selectedKeg});
     }
@@ -32,6 +35,17 @@ class KegControl extends React.Component {
       }
     }
     
+    handleClickingSell =()=> {
+      let incrementedKegList = this.state.mainKegList;
+      let kegPint = 0;
+      let kegPrice = 0;
+      incrementedKegList.map(q => {
+          kegPint = q.pints--;
+          kegPrice = q.price--;
+      });
+    this.setState({kegPint: kegPint});
+  }
+
     handleAddingNewKegToList = (newKeg) => {
         const newMainKegList = this.state.mainKegList.concat(newKeg);
         this.setState({mainKegList: newMainKegList,
@@ -43,7 +57,7 @@ class KegControl extends React.Component {
     let buttonText = null; 
    
     if (this.state.selectedKeg != null) {
-        currentlyVisibleState = <KegDetail Keg = {this.state.selectedKeg} />
+        currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingSell = {this.handleClickingSell}/>
         buttonText = "Return to Keg List";
     }
     else if (this.state.formVisibleOnPage) {

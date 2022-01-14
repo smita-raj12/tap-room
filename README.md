@@ -4,7 +4,7 @@
 
 ## Name of Authors:
 
-    _Smita Rajpurohit_
+  _Smita Rajpurohit_
   
 
 ## Description

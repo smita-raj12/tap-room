@@ -8,7 +8,6 @@ function App(){
   return (
     <React.Fragment>
     <div
-        class="bg_image"
         style={{
           backgroundImage: `url(${taproom})`,
           backgroundSize: "cover",

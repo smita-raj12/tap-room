@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 function getPints(pints) {
     if (pints <= 0) {
         return "Out of stock!";
-    }
-    else {
+    }else if(pints <= 10){
+        return `${pints} All most empty`
+    }else {
         return pints;
     }
 }

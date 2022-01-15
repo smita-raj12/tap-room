@@ -56,7 +56,6 @@ class KegControl extends React.Component {
           selectedKeg: null,
           editing: false 
         });
-        
       } else {
         this.setState(prevState => ({
           formVisibleOnPage: !prevState.formVisibleOnPage,
@@ -65,24 +64,24 @@ class KegControl extends React.Component {
     }
     
     handleClickingSell= ()  => {
-     let decrementingKegList = this.state.mainKegList;
+      let decrementingKegList = this.state.mainKegList;
       
       let kegPint = 0;
       let kegPrice = 0;
       decrementingKegList.map(q => {
-         return( kegPint = q.pints--,
-          kegPrice = q.price--);
+          return( 
+            kegPint = q.pints--,
+            kegPrice = q.price--
+          );
       });
       this.setState({kegPint: kegPint, kegPrice: kegPrice-- });
-   
-  };
+    };
   
 
     handleAddingNewKegToList = (newKeg) => {
         const newMainKegList = this.state.mainKegList.concat(newKeg);
         const msg = "Click the name for the details";
-        this.setState({mainKegList: newMainKegList,
-                    formVisibleOnPage: false, msg:msg });
+        this.setState({mainKegList: newMainKegList, formVisibleOnPage: false, msg:msg });
     }
 
     render(){

@@ -54,7 +54,7 @@ class KegControl extends React.Component {
           selectedKeg: null,
           editing: false 
         });
-        return "click the name to see the details"
+        
       } else {
         this.setState(prevState => ({
           formVisibleOnPage: !prevState.formVisibleOnPage,

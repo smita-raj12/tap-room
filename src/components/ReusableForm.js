@@ -9,29 +9,29 @@ function ReusableForm(props) {
         <input
           type='text'
           name='name'
-          placeholder='Name' /><br />
+          placeholder='Name' required/><br />
         <p>Brand</p>  
         <input
           type='text'
           name='brand'
-          placeholder='Brand' /><br/>
+          placeholder='Brand' required/><br/>
         <p>Price</p>  
         <input
           type='number'
           name='price'
           defaultValue={124}
-          placeholder='Price' /><br/>
+          placeholder='Price' required/><br/>
         <p>Flavor</p>  
         <input
           type='text'
           name='flavor'
-          placeholder='Flavor' /><br/>  
+          placeholder='Flavor' required/><br/>  
         <p>Pints</p>  
         <input
           type='number'
           name='pints'
           defaultValue={124}
-          placeholder='Pints' /><br/>  
+          placeholder='Pints' required/><br/>  
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

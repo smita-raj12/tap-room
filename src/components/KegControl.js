@@ -44,7 +44,8 @@ class KegControl extends React.Component {
       const newMainKegList = this.state.mainKegList.filter(keg => keg.id !== id);
       this.setState({
         mainKegList: newMainKegList,
-        selectedKeg: null
+        selectedKeg: null,
+        msg:" "
       });
     }
 

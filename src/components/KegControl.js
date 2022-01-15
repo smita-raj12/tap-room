@@ -64,17 +64,19 @@ class KegControl extends React.Component {
       }
     }
     
-    handleClickingSell=()=> {
-      let decrementingKegList = this.state.mainKegList;
+    handleClickingSell= ()  => {
+     let decrementingKegList = this.state.mainKegList;
+      
       let kegPint = 0;
       let kegPrice = 0;
       decrementingKegList.map(q => {
-          kegPint = q.pints--;
-          kegPrice = q.price -- ;
+         return( kegPint = q.pints--,
+          kegPrice = q.price--);
       });
-    this.setState({kegPint: kegPint,kegPrice: kegPrice});
-    return;
-  }
+      this.setState({kegPint: kegPint, kegPrice: kegPrice-- });
+   
+  };
+  
 
     handleAddingNewKegToList = (newKeg) => {
         const newMainKegList = this.state.mainKegList.concat(newKeg);

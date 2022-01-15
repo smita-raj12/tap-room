@@ -5,7 +5,7 @@ function getPints(pints) {
     if (pints <= 0) {
         return "Out of stock!";
     }else if(pints <= 10){
-        return `${pints} All most empty`
+        return `${pints}  All most empty`
     }else {
         return pints;
     }

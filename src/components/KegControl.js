@@ -14,7 +14,8 @@ class KegControl extends React.Component {
             selectedKeg: null,
             kegPint:0,
             kegPrice:0,
-            editing: false
+            editing: false,
+            msg:" "
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -76,8 +77,9 @@ class KegControl extends React.Component {
 
     handleAddingNewKegToList = (newKeg) => {
         const newMainKegList = this.state.mainKegList.concat(newKeg);
+        const msg = "Click the name for the details";
         this.setState({mainKegList: newMainKegList,
-                    formVisibleOnPage: false });
+                    formVisibleOnPage: false, msg:msg });
     }
 
     render(){
@@ -101,7 +103,7 @@ class KegControl extends React.Component {
         currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}  />;
         buttonText = "Return to Keg List";
     } else {
-        currentlyVisibleState = <KegList KegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />;
+        currentlyVisibleState = <KegList msg={this.state.msg} kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />;
         buttonText = "Add Keg";
     }
         return (

@@ -27,6 +27,10 @@ This application have the following functionality:
 4. JSX
 5. CSS
 
+
+## live site
+
+[http://192.168.1.17:3001] (http://192.168.1.17:3001)
 ## Component Daigram
 
 ![alt text](Screenshot.png) 
